@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "fast-api-tutorial"
+version = "0.1.0"
+description = "Fast API Tutorial"
+authors = ["Mario Simonsen <mariosim93@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "fast_api_tutorial"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.23.1"}
+httpx = "^0.24.1"
+jinja2 = "^3.1.2"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
