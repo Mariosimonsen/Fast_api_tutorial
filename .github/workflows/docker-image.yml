@@ -20,6 +20,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - uses: divideprojects/poetry-export-requirements-action@v1
+      with:
+        without-hashes: true
+        outfile-name: requirements.txt
+
     - name: Log in to the Container registry
       uses: docker/login-action@v2
       with:
