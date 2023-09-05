@@ -12,6 +12,6 @@ templates = Jinja2Templates('templates')
 def index(request: Request):
     return templates.TemplateResponse('home/index.html', {'request': request})
 
-@router.get('/favicon.ico')
+@router.get('/favicon.ico', include_in_schema=False)
 def favicon():
     return fastapi.responses.RedirectResponse(url='/static/img/favicon.ico')
